@@ -20,5 +20,5 @@ export async function enablePush() {
 export async function notifyLocal(title, body, tag) {
   if (Notification.permission !== 'granted') return
   const reg = await navigator.serviceWorker.ready
-  reg.showNotification(title, { body, tag, icon: '/icon-192.png' })
+  reg.showNotification(title, { body, tag, icon: import.meta.env.BASE_URL + 'icon-192.png' })
 }
