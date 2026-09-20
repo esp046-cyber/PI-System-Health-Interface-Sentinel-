@@ -3,13 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!-- Core SEO -->
+    <title>PI System Health &amp; Interface Sentinel | AVEVA PI Monitoring PWA</title>
+    <meta name="description" content="Mobile-first dashboard for monitoring AVEVA PI Data Archive, AF Server and interface health, with stale-data, disconnect and buffer-backup alerts." />
+    <meta name="author" content="esp046-cyber" />
+    <link rel="canonical" href="https://esp046-cyber.github.io/PI-System-Health-Interface-Sentinel-/" />
+
+    <!-- Open Graph (image URLs must be absolute) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PI Sentinel" />
+    <meta property="og:title" content="PI System Health &amp; Interface Sentinel" />
+    <meta property="og:description" content="Monitor PI Data Archive, AF Server and SCADA/PLC interface health from your phone." />
+    <meta property="og:url" content="https://esp046-cyber.github.io/PI-System-Health-Interface-Sentinel-/" />
+    <meta property="og:image" content="https://esp046-cyber.github.io/PI-System-Health-Interface-Sentinel-/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PI Sentinel dashboard showing green, yellow and red status lights for PI servers and interfaces" />
+
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PI System Health &amp; Interface Sentinel" />
+    <meta name="twitter:description" content="Monitor PI Data Archive, AF Server and SCADA/PLC interface health from your phone." />
+    <meta name="twitter:image" content="https://esp046-cyber.github.io/PI-System-Health-Interface-Sentinel-/og-image.png" />
+    <meta name="twitter:image:alt" content="PI Sentinel dashboard showing green, yellow and red status lights for PI servers and interfaces" />
+
+    <!-- PWA & iOS -->
     <meta name="theme-color" content="#0b1114" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="PI Sentinel" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/icon-192.png" />
-    <title>PI Sentinel</title>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PI System Health & Interface Sentinel",
+      "url": "https://esp046-cyber.github.io/PI-System-Health-Interface-Sentinel-/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any (installable PWA)",
+      "description": "Progressive web app for monitoring AVEVA PI Data Archive, AF Server and interface health, with alerts for stale data, disconnected nodes and buffer backups.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
