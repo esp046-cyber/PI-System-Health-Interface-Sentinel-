@@ -15,16 +15,16 @@ self.addEventListener('push', (event) => {
     self.registration.showNotification(data.title, {
       body: data.body,
       tag: data.tag,            // collapses repeat alerts for the same interface
-      icon: '/icon-192.png',
-      badge: '/icon-192.png',
-      data: { url: data.url || '/' },
+      icon: self.registration.scope + 'icon-192.png',
+      badge: self.registration.scope + 'icon-192.png',
+      data: { url: data.url || self.registration.scope },
     })
   )
 })
 
 self.addEventListener('notificationclick', (event) => {
   event.notification.close()
-  const url = event.notification.data?.url || '/'
+  const url = event.notification.data?.url || self.registration.scope
   event.waitUntil(
     self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((list) => {
       for (const c of list) if ('focus' in c) return c.focus()
