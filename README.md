@@ -1,6 +1,6 @@
 # PI System Health & Interface Sentinel
 
-Dark-mode PWA for monitoring PI Data Archive, AF Server and PI interface health. React + Vite + Tailwind v4 + `vite-plugin-pwa`.
+Dark-mode PWA for monitoring PI Data Archive, AF Server and PI interface health. React + Vite + Tailwind v3 + `vite-plugin-pwa`.
 
 ## Run locally
 ```bash
@@ -22,7 +22,16 @@ npm run dev
 ## Going live
 Edit `getInterfaceHealth()` in `src/services/piApiService.js` to match your interface health tag naming. Tune alert thresholds in `THRESHOLDS`.
 
+## Deploy on GitHub Pages
+1. In `vite.config.js`, `base` defaults to `/PI-System-Health-Interface-Sentinel/`; change it if your repo name differs.
+2. Repo Settings > Pages > Build and deployment > Source: **GitHub Actions**.
+3. Push to `main`; `.github/workflows/deploy.yml` builds and publishes `dist/`.
+4. Add `VITE_*` values under Settings > Secrets and variables > Actions > Variables (they are public in the bundle).
+5. Check the Actions tab for a green run.
+
 ## Deploy on Render
+Set env var `VITE_BASE=/` so assets resolve from the site root.
+
 1. Push this repo to GitHub.
 2. Render dashboard: New > **Static Site**, select the repo.
 3. Build command `npm install && npm run build`, publish directory `dist`.
